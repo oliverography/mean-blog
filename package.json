@@ -1,0 +1,16 @@
+{
+  "name": "mean-blog",
+  "version": "1.0.0",
+  "description": "Blog made with MEAN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Huang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.2"
+  }
+}
