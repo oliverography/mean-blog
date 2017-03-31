@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="../js/app.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
   <div class="container" ng-controller="BlogController">
@@ -16,6 +16,17 @@
     <input ng-model="post.title" class="form-control" type="text" placeholder="title">
     <textarea ng-model="post.body" class="form-control" placeholder="body"></textarea>
     <button ng-click="createPost(post)" class="btn btn-primary btn-block">Post</button>
+    <button ng-click="updatePost(post)" class="btn btn-success btn-block">Update</button>
+
+    <div ng-repeat="post in posts">
+      <h2>
+        {{post.title}}
+        <a ng-click="editPost(post._id)" class="pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a ng-click="deletePost(post._id)" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+      </h2>
+      <em>{{post.posted}}</em>
+      <p>{{post.body}}</p>
+    </div>
 
   </div>
 </body>
